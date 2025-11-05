@@ -1,86 +1,66 @@
-# Online-Bookstore-Web-App
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-This project is a **Laravel-based e-commerce web app** for buying and selling books online.  
-It simulates a real-world bookstore experience — users can list their books for sale, browse others’ listings, and place simulated orders.  
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-This project demonstrates the **core concepts of full-stack Laravel development**, including MVC architecture, routing, authentication, migrations, validation, and CRUD operations.
+## About Laravel
 
----
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-##  Objective
-To develop a scalable and user-friendly online platform that allows users to **buy and sell books**, while applying Laravel’s **MVC framework**, database management, and web development best practices.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
----
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-##  Problem Statement
-Traditional bookstores and marketplaces are often limited by location, inventory, or trust issues.  
-YourBook solves this by creating a **centralized digital bookstore**, where verified users can easily manage book listings, search for titles, and place orders — all from a browser.
+## Learning Laravel
 
----
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-##  Tools and Technologies Used
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-| Category | Tools / Frameworks |
-|-----------|--------------------|
-| **Backend Framework** | Laravel 9.x |
-| **Programming Language** | PHP 8+ |
-| **Frontend** | Blade Templates (HTML, CSS, Bootstrap) |
-| **Database** | MySQL |
-| **Authentication** | Laravel Breeze / Built-in Auth |
-| **Development Tools** | Composer, Artisan CLI, XAMPP |
-| **Version Control** | Git & GitHub |
-| **Key Concepts** | MVC Architecture, Routing, Eloquent ORM, Validation, Sessions, Middleware |
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
----
+## Laravel Sponsors
 
-##  System Design
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-YourBook follows the **MVC (Model-View-Controller)** pattern.
+### Premium Partners
 
-### **Models**
-- `User` – manages buyers and sellers  
-- `Book` – handles book listings  
-- `Order` & `OrderItem` – manage simulated purchases
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-### **Controllers**
-- `BookController` – CRUD operations for books  
-- `OrderController` – handles checkout and order storage  
-- `CartController` – manages shopping cart logic  
+## Contributing
 
-### **Views (Blade Templates)**
-- `books/index.blade.php` – book listing  
-- `books/create.blade.php` – form to add a book  
-- `orders/index.blade.php` – order history page  
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
----
+## Code of Conduct
 
-##  Database Structure
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-| Table | Description |
-|--------|--------------|
-| `users` | Stores user information (name, email, password, role) |
-| `books` | Stores book details added by sellers |
-| `orders` | Records placed orders (simulated payment) |
-| `order_items` | Stores individual items in each order |
+## Security Vulnerabilities
 
-### **Relationships**
-- One `user` → many `books`  
-- One `user` → many `orders`  
-- One `order` → many `order_items`  
-- One `book` → many `order_items`
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
----
+## License
 
-##  Flow of Execution
-
-1. **User registers or logs in**  
-2. **Seller adds books** using the book form  
-3. **Buyer browses books** on the homepage  
-4. Buyer clicks **Buy Now**, quantity is confirmed  
-5. The system **simulates payment** and stores the order  
-6. **Order details** can be viewed in the “My Orders” page  
-7. **Flash message** confirms successful checkout  
-
----
-
-## 📂 Project Structure
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
