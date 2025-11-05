@@ -1,6 +1,6 @@
 # Online-Bookstore-Web-App
 
-YourBook is a **Laravel-based e-commerce web app** for buying and selling books online.  
+This project is a **Laravel-based e-commerce web app** for buying and selling books online.  
 It simulates a real-world bookstore experience — users can list their books for sale, browse others’ listings, and place simulated orders.  
 
 This project demonstrates the **core concepts of full-stack Laravel development**, including MVC architecture, routing, authentication, migrations, validation, and CRUD operations.
